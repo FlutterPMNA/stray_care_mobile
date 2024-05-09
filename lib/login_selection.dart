@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:stray_care/authorites/authority_login.dart';
 import 'package:stray_care/constants/custom_colors.dart';
 import 'package:stray_care/user/user_login_screen.dart';
+import 'package:stray_care/veterinary/veterinary_login.dart';
 
 class LoginSelection extends StatelessWidget {
   const LoginSelection({super.key});
@@ -87,7 +89,9 @@ class LoginSelection extends StatelessWidget {
                               borderRadius: BorderRadius.circular(30),
                               color: CustomColors.buttonColor1),
                           child: TextButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=> const AuthorityLogin()));
+                              },
                               child: Text(
                                 "Authorities",
                                 style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
@@ -106,7 +110,9 @@ class LoginSelection extends StatelessWidget {
                               borderRadius: BorderRadius.circular(30),
                               color: CustomColors.buttonColor1),
                           child: TextButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=> const VeterinaryLogin()));
+                              },
                               child: Text(
                                 "Veterinary",
                                 style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:stray_care/constants/custom_float_button.dart';
 
 import '../constants/custom_colors.dart';
 
@@ -117,19 +118,7 @@ class UserReportMissing extends StatelessWidget {
         ),
 
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.pop(context);
-        },
-        child: Icon(
-          CupertinoIcons.back,
-          color: Colors.white,
-          size: 60,
-        ),
-        backgroundColor: CustomColors.buttonColor1,
-        elevation: 5,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
-      ),
+      floatingActionButton: const CustomFloatButton(),
     );
   }
 }
